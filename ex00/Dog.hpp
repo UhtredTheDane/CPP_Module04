@@ -19,10 +19,10 @@ class Dog: public Animal
 
 		Dog(void);
 		Dog(Dog const& toCopy);
-		operator=(Dog const& toAffect);
+		Dog& operator=(Dog const& toAffect);
 		~Dog(void);
 
-		void	makeSound(void);
+		virtual void	makeSound(void);
 }
 
 #endif

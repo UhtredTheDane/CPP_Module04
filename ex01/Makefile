@@ -13,7 +13,7 @@
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -Wshadow -std=c++98 -MMD
 NAME = borderlands4
-SRC= DiamondTrap.cpp FragTrap.cpp ScavTrap.cpp ClapTrap.cpp main.cpp
+SRC= Brainz.cpp WrongCat.cpp WrongAnimal.cpp Dog.cpp Cat.cpp Animal.cpp main.cpp
 OBJ= $(SRC:.cpp=.o)
 DEP= ${OBJ:.o=.d}
 

@@ -13,6 +13,8 @@
 #ifndef ANIMAL_HPP
 # define ANIMAL_HPP
 
+# include <iostream>
+
 class Animal
 {
 	public:
@@ -22,7 +24,7 @@ class Animal
 		Animal&	operator=(Animal const& toAffect);
 		~Animal(void);
 
-		void	makeSound(void);
+		virtual void	makeSound(void);
 
 	protected:
 
