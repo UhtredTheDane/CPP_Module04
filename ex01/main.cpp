@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 11:01:41 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/09 17:44:05 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/09 18:45:21 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ int main(void)
 			zoo[i] = new Cat();
 	}
 
-	const Animal dog(zoo[0]);
+	const Animal dog(*zoo[0]);
 
-	std::cout << "Brain's dog 1" << std::endl;
-	std::cout << "Brain's dog 2" << std::endl;
+	std::cout << "Dog1's Brain Adress: "<< dog.brain << std::endl;
+	std::cout << "Dog2's Brain Adress: " << zoo[0]->brain << std::endl;
 
 	for (int i = 0; i < 10; ++i)
 	{
-		delete zoo[i];
+//		delete zoo[i];
 	}
 	return (0);
 }

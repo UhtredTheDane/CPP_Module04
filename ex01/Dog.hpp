@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 11:55:25 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/09 17:18:43 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/09 18:45:51 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ class Dog: public Animal
 
 		virtual void	makeSound(void) const;
 
-	private:
-
 		Brain *brain;
+	//private:
+
 };
 
 #endif
