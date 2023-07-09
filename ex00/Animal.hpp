@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 11:05:41 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/09 17:18:16 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/09 17:37:52 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 class Animal
 {
 	public:
-		
+
 		Animal(void);
 		Animal(Animal const& toCopy);
 		Animal&	operator=(Animal const& toAffect);
 		~Animal(void);
-		
+
 		std::string getType(void) const;
 		virtual void	makeSound(void) const;
 
