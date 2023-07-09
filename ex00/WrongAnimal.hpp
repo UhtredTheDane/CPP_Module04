@@ -3,7 +3,7 @@
 
 # include <iostream>
 
-class WrongAnimal: public Animal
+class WrongAnimal
 {
 	public:
 
@@ -12,7 +12,12 @@ class WrongAnimal: public Animal
 		WrongAnimal& operator=(WrongAnimal const& toAffect);
 		~WrongAnimal(void);
 
-		void	makeSound(void);
-}
+		std::string getType(void) const;
+		void	makeSound(void) const;
+	
+	protected:
+
+		std::string type;
+};
 
 #endif

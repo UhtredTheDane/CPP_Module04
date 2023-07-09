@@ -1,7 +1,9 @@
 #ifndef WRONGCAT_HPP
 # define WRONGCAT_HPP
 
-class WrongCat: public Cat
+# include "WrongAnimal.hpp"
+
+class WrongCat: public WrongAnimal
 {
 	public:
 
@@ -10,7 +12,7 @@ class WrongCat: public Cat
 		WrongCat& operator=(WrongCat const& toAffect);
 		~WrongCat(void);
 
-		void	makeSound(void);
-}
+		void	makeSound(void) const;
+};
 
 #endif

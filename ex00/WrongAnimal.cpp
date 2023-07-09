@@ -1,16 +1,18 @@
-Wrong::WrongAnimal(void)
-    : type("None");
+#include "WrongAnimal.hpp"
+
+WrongAnimal::WrongAnimal(void)
+    : type("None")
 {
     std::cout << "WrongAnimal Default Constructor called." << std::endl;
 }
 
-Wrong::WrongAnimal(WrongAnimal const& toCopy)
+WrongAnimal::WrongAnimal(WrongAnimal const& toCopy)
 {
     std::cout << "WrongAnimal Copy Constructor called." << std::endl;
-	*this = toCopy
+	*this = toCopy;
 }
 
-WrongAnimal& WrongAimal::operator=(WrongAnimal const& toAffect)
+WrongAnimal& WrongAnimal::operator=(WrongAnimal const& toAffect)
 {
     if (this != &toAffect)
 		type = toAffect.type;
@@ -22,7 +24,12 @@ WrongAnimal::~WrongAnimal(void)
     std::cout << "WrongAnimal Destructor called." << std::endl;
 }
 
-void	WrongAnimal::makeSound(void)
+std::string WrongAnimal::getType(void) const
+{
+	return (type);
+}
+
+void	WrongAnimal::makeSound(void) const
 {
     std::cout << "All WrongSounds." << std::endl;
 }

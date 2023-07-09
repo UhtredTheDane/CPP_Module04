@@ -6,12 +6,14 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 11:05:33 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/06 11:55:03 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/09 17:19:26 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Animal.hpp"
+
 Animal::Animal(void)
-	: type("None");
+	: type("None")
 {
 	std::cout << "Animal Default Constructor called." << std::endl;
 }
@@ -19,7 +21,7 @@ Animal::Animal(void)
 Animal::Animal(Animal const& toCopy)
 {
 	std::cout << "Animal Copy Constructor called." << std::endl;
-	*this = toCopy
+	*this = toCopy;
 }
 
 Animal&	Animal::operator=(Animal const& toAffect)
@@ -34,7 +36,12 @@ Animal::~Animal(void)
 	std::cout << "Animal Destructor called." << std::endl;
 }
 
-void	Animal::makeSound(void)
+std::string	Animal::getType(void) const
+{
+	return (this->type);
+}
+
+void	Animal::makeSound(void) const
 {
 	std::cout << "All Sounds." << std::endl;
 }

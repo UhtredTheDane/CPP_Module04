@@ -6,12 +6,14 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 11:55:25 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/06 11:58:04 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/09 17:18:43 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
 # define DOG_HPP
+
+# include "Animal.hpp"
 
 class Dog: public Animal
 {
@@ -22,7 +24,7 @@ class Dog: public Animal
 		Dog& operator=(Dog const& toAffect);
 		~Dog(void);
 
-		virtual void	makeSound(void);
-}
+		virtual void	makeSound(void) const;
+};
 
 #endif
