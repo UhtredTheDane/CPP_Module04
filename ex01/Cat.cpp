@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 11:58:13 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/09 17:19:12 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/09 18:17:36 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Cat&	Cat::operator=(Cat const& toAffect)
 {
 	if (this != &toAffect)
 	{
-		brain = new Brain(toAffect.brain);
+		brain = new Brain(*toAffect.brain);
 		type = toAffect.type;
 	}
 	return (*this);
