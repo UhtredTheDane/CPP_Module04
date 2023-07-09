@@ -14,43 +14,27 @@
 #include "Dog.hpp"
 #include "WrongCat.hpp"
 
-void	not_masked_makeSound(void)
-{
-	const Animal*	animal = new Animal();
-	std::cout << std::endl;
-	const Animal*	dog = new Dog();
-	std::cout << std::endl;
-	const Animal*	cat = new Cat();
-	std::cout << std::endl;
-
-	std::cout << dog->getType() << " " << std::endl;
-	std::cout << cat->getType() << " " << std::endl;
-	std::cout << std::endl;
-	dog->makeSound();
-	cat->makeSound();
-	animal->makeSound();
-	std::cout << std::endl;
-}
-
-void	masked_makeSound(void)
-{
-	const WrongAnimal*	wrongAnimal = new WrongAnimal();
-	std::cout << std::endl;
-	const WrongAnimal*	wrongCat = new WrongCat();
-	std::cout << std::endl;
-
-	std::cout << wrongCat->getType() << " " << std::endl;
-	std::cout << wrongAnimal->getType() << " " << std::endl;
-	std::cout << std::endl;
-	wrongCat->makeSound();
-	wrongAnimal->makeSound();
-	std::cout << std::endl;
-}
-
 int main(void)
 {
-	not_masked_makeSound();
-	masked_makeSound();
-	return 0;
+	const Animal *zoo[10];
+
+	for (int i = 0; i < 10; ++i)
+	{
+		if (i < 5)
+			zoo[i] = new Dog();
+		else
+			zoo[i] = new Cat();
+	}
+
+	const Animal dog(zoo[0]);
+
+	std::cout << "Brain's dog 1" << std::endl;
+	std::cout << "Brain's dog 2" << std::endl;
+
+	for (int i = 0; i < 10; ++i)
+	{
+		delete zoo[i];
+	}
+	return (0);
 }
 
