@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 15:38:03 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/11 17:19:55 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/11 19:39:48 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ Cure::Cure(void)
 }
 
 Cure::Cure(Cure const& toCopy)
+	: AMateria("Cure")
 {
-	*this = toCopy;
+
 }
 
 Cure&	Cure::operator=(Cure const& toAffect)

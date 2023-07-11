@@ -6,11 +6,16 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 15:34:36 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/11 16:49:42 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/11 19:39:20 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Amateria.hpp"
+
+AMateria::AMateria(void)
+{
+
+}
 
 AMateria::AMateria(std::string const& type)
 {

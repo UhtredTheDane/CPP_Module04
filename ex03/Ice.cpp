@@ -6,21 +6,22 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 15:37:54 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/11 17:16:04 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/11 19:40:15 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
 Ice::Ice(void)
-	: AMateria("ice");
+	: AMateria("ice")
 {
 
 }
 
 Ice::Ice(Ice const& toCopy)
+	: AMateria("ice")
 {
-	*this = toCopy;
+
 }
 
 Ice&	Ice::operator=(Ice const& toAffect)
