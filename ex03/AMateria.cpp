@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 15:34:36 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/11 15:53:20 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/11 16:49:42 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,18 @@
 AMateria::AMateria(std::string const& type)
 {
 	this->type = type;
+}
+
+AMateria::AMateria(AMateria const& toCopy)
+{
+	*this = toCopy;
+}
+
+AMateria&	AMateria::operator=(AMateria const& toAffect)
+{
+	if (this != &toAffect)
+		type = toAffect.type
+	return (*this);
 }
 
 std::string const& AMateria::getType(void) const

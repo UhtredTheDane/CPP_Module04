@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 15:34:42 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/11 15:55:11 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/11 17:20:41 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,17 @@ class AMateria
 	public:
 
 		AMateria(std::string const& type);
+		AMateria(AMateria const& toCopy);
+		AMateria operator=(AMateria const& toAffect);
+		virtual ~AMateria(void);
+
 		std::string const& getType() const; //Returns the materia type
 		virtual AMateria* clone() const = 0;
 		virtual void use(ICharacter& target);
 
+	private:
+
+		AMateria(void);
 };
 
 #endif
