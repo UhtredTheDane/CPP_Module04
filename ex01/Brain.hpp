@@ -24,8 +24,12 @@ class Brain
 		Brain& operator=(Brain const& toAffect);
 		~Brain(void);
 
+		void	setIdea(std::string idea);
+		std::string	getIdea(int num);
+
 	private:
 
+		int	ideas_position;
 		std::string ideas[100];
 
 };

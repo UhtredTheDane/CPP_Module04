@@ -23,8 +23,9 @@ class Cat: public Animal
 		Cat(void);
 		Cat(Cat const& toCopy);
 		Cat& operator=(Cat const& toAffect);
-		~Cat(void);
+		virtual	~Cat(void);
 
+		Brain*	getBrain(void);
 		virtual void	makeSound(void) const;
 
 	private:

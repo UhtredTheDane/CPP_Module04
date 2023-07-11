@@ -23,7 +23,7 @@ class Animal
 		Animal(void);
 		Animal(Animal const& toCopy);
 		Animal&	operator=(Animal const& toAffect);
-		~Animal(void);
+		virtual	~Animal(void);
 
 		std::string getType(void) const;
 		virtual void	makeSound(void) const;

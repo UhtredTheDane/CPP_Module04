@@ -42,6 +42,11 @@ Dog::~Dog(void)
 	delete brain;
 }
 
+Brain*	Dog::getBrain(void)
+{
+	return (brain);
+}
+
 void	Dog::makeSound(void) const
 {
 	std::cout << "The Dog barks." << std::endl;

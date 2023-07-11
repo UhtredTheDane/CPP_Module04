@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 11:01:41 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/09 18:45:21 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/11 14:54:35 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Dog.hpp"
 #include "WrongCat.hpp"
 
-int main(void)
+void	test_animal_array(void)
 {
 	const Animal *zoo[10];
 
@@ -25,16 +25,37 @@ int main(void)
 		else
 			zoo[i] = new Cat();
 	}
-
-	const Animal dog(*zoo[0]);
-
-	std::cout << "Dog1's Brain Adress: "<< dog.brain << std::endl;
-	std::cout << "Dog2's Brain Adress: " << zoo[0]->brain << std::endl;
-
 	for (int i = 0; i < 10; ++i)
 	{
-//		delete zoo[i];
+		delete zoo[i];
 	}
+}
+
+void	test_animal_copy(void)
+{
+	Dog dog1;
+	Brain	*brain1 = dog1.getBrain();
+
+	brain1->setIdea("eat");
+	brain1->setIdea("sleep");
+	brain1->setIdea("play");
+
+	Dog dog2(dog1);
+	Brain	*brain2 = dog2.getBrain();
+
+	std::cout << "First idea dog 2: " << brain2->getIdea(0) << std::endl;
+	std::cout << "Second idea dog 2: " << brain2->getIdea(1) << std::endl;
+	std::cout << "Third idea dog 2: " << brain2->getIdea(2) << std::endl;
+
+	std::cout << "Dog1's Brain Adress: " << brain1 << std::endl;
+	std::cout << "Dog2's Brain Adress: " << brain2 << std::endl;
+}
+
+int main(void)
+{
+	test_animal_array();
+	std::cout << std::endl;
+	test_animal_copy();
 	return (0);
 }
 

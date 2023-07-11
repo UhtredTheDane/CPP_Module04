@@ -23,12 +23,14 @@ class Dog: public Animal
 		Dog(void);
 		Dog(Dog const& toCopy);
 		Dog& operator=(Dog const& toAffect);
-		~Dog(void);
+		virtual	~Dog(void);
 
+		Brain*	getBrain(void);
 		virtual void	makeSound(void) const;
 
+	private:
+
 		Brain *brain;
-	//private:
 
 };
 

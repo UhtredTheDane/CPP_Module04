@@ -42,6 +42,11 @@ Cat::~Cat(void)
 	delete brain;
 }
 
+Brain*	Cat::getBrain(void)
+{
+	return (brain);
+}
+
 void	Cat::makeSound(void) const
 {
 	std::cout << "The Cat meows." << std::endl;
