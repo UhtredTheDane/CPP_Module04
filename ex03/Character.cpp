@@ -25,7 +25,6 @@ Character::Character(std::string const& name)
 }
 
 Character::Character(Character const& toCopy)
-	: name(toCopy.name)
 {
 	*this = toCopy;
 }
@@ -39,8 +38,10 @@ Character&	Character::operator=(Character const& toAffect)
 		name = toAffect.name;
 		for (int i = 0; i < 4; ++i)
 		{
-
-			inventory[i] = toAffect.inventory[i]->clone();
+			if (toAffect.inventory[i] != NULL)
+				inventory[i] = toAffect.inventory[i]->clone();
+			else
+				inventory[i] = NULL;
 		}
 	}
 	return (*this);
@@ -48,7 +49,11 @@ Character&	Character::operator=(Character const& toAffect)
 
 Character::~Character(void)
 {
-
+	for (int i = 0; i < 4; ++i)
+	{
+		if (inventory[i] != NULL)
+			delete inventory[i];
+	}
 }
 
 std::string const& Character::getName(void) const

@@ -23,6 +23,7 @@ class Character: public ICharacter
 		Character(Character const& toCopy);
 		Character&	operator=(Character const& toAffect);
 		virtual ~Character(void);
+		
 		virtual std::string const& getName(void) const;
 		virtual void equip(AMateria *m);
 		virtual void unequip(int idx);

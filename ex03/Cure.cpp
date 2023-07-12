@@ -39,6 +39,7 @@ Cure::~Cure(void)
 AMateria*	Cure::clone(void) const
 {
 	Cure	*clone = new Cure();
+	
 	*clone = *this;
 	return (clone);
 }

@@ -28,6 +28,7 @@ class MateriaSource: public IMateriaSource
 
 	private:
 
+		int	size;
 		AMateria *inventory[4];
 
 };
