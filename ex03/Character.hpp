@@ -6,21 +6,20 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 16:05:12 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/11 20:03:19 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/12 14:22:19 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_HPP
-# define CHARACTER_HHP
+# define CHARACTER_HPP
 
 # include "ICharacter.hpp"
-# include "AMateria.hpp"
 
 class Character: public ICharacter
 {
 	public:
 
-		Character(std::string name);
+		Character(std::string const& name);
 		Character(Character const& toCopy);
 		Character&	operator=(Character const& toAffect);
 		virtual ~Character(void);

@@ -6,11 +6,11 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 15:34:36 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/11 19:39:20 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/12 14:04:49 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Amateria.hpp"
+#include "AMateria.hpp"
 
 AMateria::AMateria(void)
 {
@@ -23,15 +23,21 @@ AMateria::AMateria(std::string const& type)
 }
 
 AMateria::AMateria(AMateria const& toCopy)
+	: type(toCopy.type)
 {
-	*this = toCopy;
+
 }
 
 AMateria&	AMateria::operator=(AMateria const& toAffect)
 {
 	if (this != &toAffect)
-		type = toAffect.type
+		type = toAffect.type;
 	return (*this);
+}
+
+AMateria::~AMateria(void)
+{
+
 }
 
 std::string const& AMateria::getType(void) const
@@ -39,12 +45,7 @@ std::string const& AMateria::getType(void) const
 	return (type);
 }
 
-AMateria* AMateria::clone() const
-{
-
-}
-
 void	AMateria::use(ICharacter& target)
 {
-	std::cout << name << " uses a material on " << target.name << std::endl;
+	std::cout << "* non identified materia is use on " << target.getName() << " *" << std::endl;
 }

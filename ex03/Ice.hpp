@@ -6,18 +6,19 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 15:37:50 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/11 17:15:00 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/12 14:05:48 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICE_HPP
 # define ICE_HPP
 
-# include "AMaterial.hpp"
+# include "AMateria.hpp"
+# include "ICharacter.hpp"
 
-class Ice: public AMaterial
+class Ice: public AMateria
 {
-	public;
+	public:
 
 		Ice(void);
 		Ice(Ice const& toCopy);
@@ -25,7 +26,7 @@ class Ice: public AMaterial
 		virtual ~Ice(void);
 		
 		virtual AMateria* clone() const;
-		virtual void user(ICharacter& target);	
+		virtual void use(ICharacter& target);	
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 15:37:54 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/11 19:40:15 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/12 14:05:31 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Ice::Ice(void)
 }
 
 Ice::Ice(Ice const& toCopy)
-	: AMateria("ice")
+	: AMateria(toCopy.type)
 {
 
 }
@@ -39,11 +39,11 @@ Ice::~Ice(void)
 AMateria*	Ice::clone(void) const
 {
 	Ice *clone = new Ice();
-	clone->type = type;
+	*clone = *this;
 	return (clone);	
 }
 
-void	use(ICharacter& target)
+void	Ice::use(ICharacter& target)
 {
-	std::cout << "* shoots an ice bolt at " << target.name << " *" << std::endl;
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

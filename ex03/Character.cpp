@@ -6,9 +6,11 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 16:05:06 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/11 20:04:45 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/12 16:26:04 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Character.hpp"
 
 Character::Character(void)
 {
@@ -16,23 +18,30 @@ Character::Character(void)
 	first_void = 0;
 }
 
-Character::Character(std::string name)
+Character::Character(std::string const& name)
+	: name(name)
 {
-	type->name = name;
 	first_void = 0;
 }
 
 Character::Character(Character const& toCopy)
+	: name(toCopy.name)
 {
 	*this = toCopy;
 }
 
-Character&	Character::Character(Character const& toAffect)
+Character&	Character::operator=(Character const& toAffect)
 {
+	std::string	type;
+
 	if (this != &toAffect)
 	{
 		name = toAffect.name;
-		//recopier inventqire
+		for (int i = 0; i < 4; ++i)
+		{
+
+			inventory[i] = toAffect.inventory[i]->clone();
+		}
 	}
 	return (*this);
 }
@@ -49,15 +58,26 @@ std::string const& Character::getName(void) const
 
 void	Character::equip(AMateria *m)
 {
-	
+	if (first_void < 4)
+	{
+		inventory[first_void] = m;
+		for (first_void = first_void + 1; first_void < 4; ++first_void)
+			if (inventory[first_void] == NULL)
+				break;
+	}
 }
 
 void	Character::unequip(int idx)
 {
-
+	if (inventory[idx] != NULL)
+	{
+		inventory[idx] = NULL;
+		if (idx < first_void)
+			first_void = idx;
+	}
 }
 
-void	Character::use(int idxm, ICharacter& target)
+void	Character::use(int idx, ICharacter& target)
 {
-
+	inventory[idx]->use(target);
 }

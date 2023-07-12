@@ -6,14 +6,14 @@
 #    By: agengemb <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/03 18:01:24 by agengemb          #+#    #+#              #
-#    Updated: 2023/07/11 17:02:14 by agengemb         ###   ########.fr        #
+#    Updated: 2023/07/12 14:22:55 by agengemb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
-CFLAGS = -Wall -Werror -Wextra -Wshadow -std=c++98 -MMD
+CFLAGS = -std=c++98 -MMD
 NAME = borderlands4
-SRC= Cure.cpp Ice.cpp AMateria.cpp main.cpp
+SRC= Character.cpp Cure.cpp Ice.cpp AMateria.cpp main.cpp
 OBJ= $(SRC:.cpp=.o)
 DEP= ${OBJ:.o=.d}
 

@@ -6,12 +6,17 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 15:49:14 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/11 19:53:14 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/12 14:00:35 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICHARACTER_HPP
 # define ICHARACTER_HPP
+
+# include <string>
+# include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {
@@ -22,6 +27,7 @@ class ICharacter
 		virtual void equip(AMateria* m) = 0;
 		virtual void unequip(int idx) = 0;
 		virtual void use(int idx, ICharacter& target) = 0;
+
 };
 
-#endif;
+#endif
