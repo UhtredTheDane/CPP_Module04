@@ -6,14 +6,14 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 15:38:03 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/12 13:25:20 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/13 01:48:14 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
 Cure::Cure(void)
-	: AMateria("Cure")
+	: AMateria("cure")
 {
 
 }

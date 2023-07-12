@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 17:52:31 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/12 16:45:35 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/13 01:27:17 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define MATERIASOURCE_HPP
 
 # include "IMateriaSource.hpp"
+# include "AMateria.hpp"
 
 class MateriaSource: public IMateriaSource
 {

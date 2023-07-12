@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 17:52:24 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/12 17:17:08 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/13 01:48:06 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,16 +53,19 @@ void	MateriaSource::learnMateria(AMateria* materia)
 	{
 		inventory[size] = materia->clone();
 		++size;
-	}
 	delete materia;
+	}
 }
 
 AMateria*	MateriaSource::createMateria(std::string const& type)
 {
 	for (int i = 0; i < 4; ++i)
 	{
-		if (type == inventory[i]->getType())
-			return (inventory[i]->clone());
+		if (inventory[i] != NULL)
+		{
+			if (type == inventory[i]->getType())
+				return (inventory[i]->clone());
+		}
 	}
 	return (NULL);
 }
