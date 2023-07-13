@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 16:05:06 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/13 01:48:50 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/13 19:55:55 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,13 @@ Character::Character(Character const& toCopy)
 Character&	Character::operator=(Character const& toAffect)
 {
 	std::string	type;
-
+	std::cout << "yes" << std::endl;
 	if (this != &toAffect)
 	{
 		name = toAffect.name;
 		for (int i = 0; i < 4; ++i)
 		{
+			delete inventory[i];
 			if (toAffect.inventory[i] != NULL)
 				inventory[i] = toAffect.inventory[i]->clone();
 			else
@@ -74,7 +75,7 @@ void	Character::equip(AMateria *materia)
 
 void	Character::unequip(int idx)
 {
-	if (inventory[idx] != NULL)
+	if (idx >= 0 && idx < 4 && inventory[idx] != NULL)
 	{
 		inventory[idx] = NULL;
 		if (idx < first_void)
@@ -84,6 +85,23 @@ void	Character::unequip(int idx)
 
 void	Character::use(int idx, ICharacter& target)
 {
-	if (inventory[idx] != NULL)
+	if (idx >= 0 && idx < 4 && inventory[idx] != NULL)
 		inventory[idx]->use(target);
+}
+
+void	Character::show_inventory(void)
+{
+	int	i;
+
+	std::cout << name << "'s Inventory:" << std::endl;
+	i = 0;
+	for (int i = 0; i < 4; ++i)
+	{
+		std::cout << i + 1;
+		if (inventory[i] != NULL)
+			std::cout << "- " << inventory[i]->getType() << std::endl;
+		else
+			std::cout << "- empty" << std::endl;
+	}
+	std::cout << std::endl;
 }

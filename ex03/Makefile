@@ -6,13 +6,13 @@
 #    By: agengemb <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/03 18:01:24 by agengemb          #+#    #+#              #
-#    Updated: 2023/07/13 01:26:27 by agengemb         ###   ########.fr        #
+#    Updated: 2023/07/13 19:28:05 by agengemb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 CFLAGS = -std=c++98 -MMD
-NAME = borderlands4
+NAME = interfaces
 SRC= MateriaSource.cpp Character.cpp Cure.cpp Ice.cpp AMateria.cpp main.cpp
 OBJ= $(SRC:.cpp=.o)
 DEP= ${OBJ:.o=.d}
