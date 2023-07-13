@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 11:55:25 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/09 17:18:43 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/13 12:19:13 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Dog: public Animal
 		Dog(void);
 		Dog(Dog const& toCopy);
 		Dog& operator=(Dog const& toAffect);
-		~Dog(void);
+		virtual ~Dog(void);
 
 		virtual void	makeSound(void) const;
 };

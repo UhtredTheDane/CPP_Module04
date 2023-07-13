@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 11:01:41 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/09 17:44:05 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/13 12:15:03 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ void	not_masked_makeSound(void)
 	cat->makeSound();
 	animal->makeSound();
 	std::cout << std::endl;
+	delete animal;
+	delete dog;
+	delete cat;
 }
 
 void	masked_makeSound(void)
@@ -45,6 +48,8 @@ void	masked_makeSound(void)
 	wrongCat->makeSound();
 	wrongAnimal->makeSound();
 	std::cout << std::endl;
+	delete wrongAnimal;
+	delete wrongCat;
 }
 
 int main(void)
