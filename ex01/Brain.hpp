@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 18:20:10 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/09 18:20:54 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/13 14:09:16 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Brain
 
 	private:
 
-		int	ideas_position;
+		int	size;
 		std::string ideas[100];
 
 };
