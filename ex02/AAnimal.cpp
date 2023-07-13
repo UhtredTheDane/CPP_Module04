@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 11:05:33 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/11 15:12:24 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/13 14:41:35 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,4 @@ AAnimal::~AAnimal(void)
 std::string	AAnimal::getType(void) const
 {
 	return (this->type);
-}
-
-void	AAnimal::makeSound(void) const
-{
-
 }
