@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 15:49:14 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/13 18:59:48 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/14 12:53:40 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class ICharacter
 		virtual void equip(AMateria* m) = 0;
 		virtual void unequip(int idx) = 0;
 		virtual void use(int idx, ICharacter& target) = 0;
-		virtual void show_inventory(void) = 0;
+		virtual void show_inventory(void) const = 0;
 };
 
 #endif

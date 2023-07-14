@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 15:37:50 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/12 14:05:48 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/14 14:24:25 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Ice: public AMateria
 		Ice(Ice const& toCopy);
 		Ice&	operator=(Ice const& toAffect);
 		virtual ~Ice(void);
-		
+
 		virtual AMateria* clone() const;
 		virtual void use(ICharacter& target);	
 };

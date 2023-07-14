@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 17:52:31 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/13 01:27:17 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/14 14:25:06 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@
 class MateriaSource: public IMateriaSource
 {
 	public:
-		
+
 		MateriaSource(void);
 		MateriaSource(MateriaSource const& toCopy);
 		MateriaSource& operator=(MateriaSource const& toAffect);
 		virtual	~MateriaSource(void);
 		virtual void	learnMateria(AMateria*);
 		virtual AMateria* createMateria(std::string const& type);
+		virtual void	show_inventory(void) const;
 
 	private:
 

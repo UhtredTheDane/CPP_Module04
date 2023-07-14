@@ -14,18 +14,19 @@
 
 AMateria::AMateria(void)
 {
-
+	std::cout << "AMateria Default Constructor called." << std::endl;
 }
 
 AMateria::AMateria(std::string const& type)
 {
+	std::cout << "AMateria Constructor called." << std::endl;
 	this->type = type;
 }
 
 AMateria::AMateria(AMateria const& toCopy)
 	: type(toCopy.type)
 {
-
+	std::cout << "AMateria Copy Constructor called." << std::endl;
 }
 
 AMateria&	AMateria::operator=(AMateria const& toAffect)
@@ -37,7 +38,7 @@ AMateria&	AMateria::operator=(AMateria const& toAffect)
 
 AMateria::~AMateria(void)
 {
-
+	std::cout << "AMateria Destructor called." << std::endl;
 }
 
 std::string const& AMateria::getType(void) const

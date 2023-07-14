@@ -15,13 +15,13 @@
 Ice::Ice(void)
 	: AMateria("ice")
 {
-
+	std::cout << "Ice Default Constructor called." << std::endl;
 }
 
 Ice::Ice(Ice const& toCopy)
 	: AMateria(toCopy.type)
 {
-
+	std::cout << "Ice Copy Constructor called." << std::endl;
 }
 
 Ice&	Ice::operator=(Ice const& toAffect)
@@ -33,12 +33,14 @@ Ice&	Ice::operator=(Ice const& toAffect)
 
 Ice::~Ice(void)
 {
-
+	std::cout << "Ice Destructor called." << std::endl;
 }
 
 AMateria*	Ice::clone(void) const
 {
 	Ice *clone = new Ice();
+
+	std::cout << "Clone of ice materia." << std::endl;
 	*clone = *this;
 	return (clone);	
 }
