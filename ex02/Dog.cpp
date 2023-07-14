@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 11:55:18 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/11 15:12:40 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/14 15:46:40 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ Dog::Dog(Dog const& toCopy)
 	: AAnimal()
 {
 	std::cout << "Dog Copy Constructor called." << std::endl;
+	brain = NULL;
 	*this = toCopy;
 }
 
@@ -30,6 +31,8 @@ Dog&	Dog::operator=(Dog const& toAffect)
 {
 	if (this != &toAffect)
 	{
+		if (brain)
+			delete brain;
 		brain = new Brain(*toAffect.brain);
 		type = toAffect.type;
 	}
