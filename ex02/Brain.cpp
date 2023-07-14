@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 18:20:04 by agengemb          #+#    #+#             */
-/*   Updated: 2023/07/13 14:09:30 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/07/14 14:29:00 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	Brain::setIdea(std::string idea)
 {
 	if (size < 100)
 	{
+		std::cout << "This brain has a new idea !" << std::endl;
 		ideas[size] = idea;
 		++size;
 	}
